@@ -178,6 +178,6 @@ This project is open-source and available under the MIT License.
 
 Contributors:
 
-Chinar Mhatre
+Chinar Mhatre 
 Pranay Karmokar 
 
