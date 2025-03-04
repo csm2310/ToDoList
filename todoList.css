@@ -1,0 +1,379 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --background-gradient: linear-gradient(135deg, #1a2e5c, #71107c);
+    --task-bg: #f7f8fa;
+    --button-color: #ff5a5f;
+    --button-hover: #e9494e;
+    --text-color: #333;
+    --icon-size: 28px;
+    --border-radius: 10px;
+  }
+  
+  /* Container */
+  .container {
+    min-height: 100vh;
+    background: var(--background-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* To-Do List */
+  .Todo-List {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  .Todo-List h2 {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .Todo-List h2 img {
+    width: var(--icon-size);
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  
+  #logout {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  #logout:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Input Row */
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px;
+    /* border: 1px solid #ddd; */
+    border-radius: var(--border-radius);
+    outline: none;
+    background: var(--task-bg);
+    transition: border-color 0.2s;
+  }
+  
+  input:focus {
+    border-color: var(--button-color);
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background: var(--button-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: var(--button-hover);
+  }
+  
+  /* Task List */
+  ul {
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+  }
+  
+  ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--task-bg);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  ul li span {
+    cursor: pointer;
+    font-size: 22px;
+    color: #888;
+    transition: color 0.2s;
+  }
+  
+  ul li span:hover {
+    color: var(--button-color);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .Todo-List {
+      padding: 30px 20px;
+    }
+  
+    input {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    ul li {
+      padding: 10px;
+      font-size: 15px;
+    }
+  
+    ul li span {
+      font-size: 20px;
+    }
+  }
+  /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --background-gradient: linear-gradient(135deg, #1a2e5c, #71107c);
+    --task-bg: #f7f8fa;
+    --button-color: #ff5a5f;
+    --button-hover: #e9494e;
+    --text-color: #333;
+    --icon-size: 28px;
+    --border-radius: 10px;
+  }
+  
+  /* Container */
+  .container {
+    min-height: 100vh;
+    background: var(--background-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* To-Do List */
+  .Todo-List {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  .Todo-List h2 {
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .Todo-List h2 img {
+    width: var(--icon-size);
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  
+  #logout {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  #logout:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Input Row */
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    outline: none;
+    background: var(--task-bg);
+    transition: border-color 0.2s;
+  }
+  
+  input:focus {
+    border-color: var(--button-color);
+  }
+  
+  button {
+    width: 100%;
+    padding: 14px;
+    background: var(--button-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: var(--button-hover);
+  }
+  
+  /* Task List */
+  ul {
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+  }
+  
+  ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--task-bg);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  ul li span {
+    cursor: pointer;
+    font-size: 22px;
+    color: #888;
+    transition: color 0.2s;
+  }
+  
+  ul li span:hover {
+    color: var(--button-color);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .Todo-List {
+      padding: 30px 20px;
+    }
+  
+    input {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    ul li {
+      padding: 10px;
+      font-size: 15px;
+    }
+  
+    ul li span {
+      font-size: 20px;
+    }
+  }
+  

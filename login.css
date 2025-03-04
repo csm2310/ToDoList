@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+  /* position: relative; */
+}
+
+.input-group span{
+  color: red;
+  font-size: 14px;
+}
+
+.input-group span i{
+  color: seagreen;
+}
+
+#icon {
+  cursor: pointer;
+}
+
+.container p a {
+  color: #ff5945;
+  text-decoration: none;
+}
+.container p a:hover {
+  text-decoration: underline;
+}
+
+#login {
+  justify-content: center;
+  display: flex;
+  color: #ff5945;
+  align-items: center;
+}
+.Todo-List h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 15px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.icon {
+  margin-right: 60%;
+}
+#logout {
+  cursor: pointer;
+}
+
+
+.input{
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  color: #333;   
+}
+
+
+.input-group img{
+  width: 35px;
+  cursor: pointer;
+}
+
+#text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+#login-button {
+  width: 100%;
+}
+
+.remember-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+.remember-me label {
+  margin-left: 5px;
+  font-size: 14px;
+}
+.remember-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.remember-container a {
+  color: #153677;
+  text-decoration: none;
+}
+
+.input-group {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+
+button {
+  outline: none;
+  border: none;
+  padding: 16px 50px;
+  cursor: pointer;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+.loginUsername {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: black;
+  padding: 10px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 10px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .Todo-List {
+    padding: 30px 20px 50px;
+    margin: 50px auto 10px;
+  }
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+  input {
+    padding: 10px;
+    font-size: 14px;
+    animation: blinkCursor 1s step-end infinite;
+  }
+  button {
+    padding: 14px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 30px;
+  }
+  ul li {
+    font-size: 15px;
+    padding: 10px 8px 10px 40px;
+  }
+
+  ul li::before {
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 5px;
+  }
+
+  ul li span {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .Todo-List {
+    padding: 20px 15px 40px;
+    margin: 20px auto;
+  }
+  .row {
+    padding: 8px;
+  }
+  input {
+    font-size: 13px;
+  }
+  button {
+    padding: 12px;
+    font-size: 13px;
+  }
+  ul li {
+    font-size: 14px;
+    padding: 8px 6px 8px 35px;
+  }
+
+  ul li::before {
+    height: 18px;
+    width: 18px;
+    top: 8px;
+    left: 5px;
+  }
+  ul li span {
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+}
+
+/* Add to your todoList.css */
+.circle {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 10px;
+  right: 0;
+  border-radius: 50%;
+  background-size: cover; /* Ensure the background image covers the entire circle */
+  margin-right: 10px;
+  display: inline-block; /* Ensures the circle appears inline with text */
+  cursor: pointer; /* Show pointer on hover */
+}
