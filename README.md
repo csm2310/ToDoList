@@ -1,4 +1,4 @@
-# ToDoList
+7# ToDoList
 To-Do List Web App
 
 Overview
@@ -166,15 +166,7 @@ Add user authentication to store tasks in a database.
 
 Implement push notifications via Firebase.
 
-Improve UI/UX with animations.
-
-
-
----
-
-License
-
-This project is open-source and available under the MIT License.
+Improve UI/UX with animations 
 
 Contributors:
 
